@@ -19,10 +19,13 @@ router.get('/animais', animalController.getAllAnimals);
 // 4. Rota para BUSCAR um animal específico pelo ID (GET /animais/:id)
 router.get('/animais/:id', animalController.getAnimalById);
 
-// 5. Rota para ATUALIZAR um animal pelo ID (PUT /animais/:id)
+// 5. Rota para ATUALIZAR COMPLETAMENTE um animal pelo ID (PUT /animais/:id)
 router.put('/animais/:id', animalController.updateAnimal);
 
-// 6. Rota para DELETAR um animal pelo ID (DELETE /animais/:id)
+// 6. Rota para ATUALIZAR PARCIALMENTE um animal pelo ID (PATCH /animais/:id)
+router.patch('/animais/:id', animalController.updatePartialAnimal);
+
+// 7. Rota para DELETAR um animal pelo ID (DELETE /animais/:id)
 router.delete('/animais/:id', animalController.deleteAnimal);
 
 module.exports = router;

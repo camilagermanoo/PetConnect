@@ -34,7 +34,7 @@ exports.getAnimalById = async (req, res) => {
   }
 };
 
-// Função para ATUALIZAR um animal por ID (PUT)
+// Função para ATUALIZAR COMPLETAMENTE um animal por ID (PUT)
 exports.updateAnimal = async (req, res) => {
   try {
     const animal = await Animal.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -42,6 +42,25 @@ exports.updateAnimal = async (req, res) => {
       return res.status(404).json({ message: "Animal não encontrado para atualização." });
     }
     res.status(200).json({ message: "Dados do animal atualizados!", animal });
+  } catch (error) {
+    res.status(400).json({ message: "Erro ao atualizar animal", error: error.message });
+  }
+};
+
+// Função para ATUALIZAR PARCIALMENTE um animal por ID (PATCH)
+exports.updatePartialAnimal = async (req, res) => {
+  try {
+    const animal = await Animal.findByIdAndUpdate(
+      req.params.id, 
+      req.body, 
+      { new: true, runValidators: true }
+    );
+    
+    if (!animal) {
+      return res.status(404).json({ message: "Animal não encontrado para atualização." });
+    }
+    
+    res.status(200).json({ message: "Animal atualizado com sucesso!", animal });
   } catch (error) {
     res.status(400).json({ message: "Erro ao atualizar animal", error: error.message });
   }
