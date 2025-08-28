@@ -1,0 +1,172 @@
+type: collection.insomnia.rest/5.0
+name: PetConnect API
+meta:
+  id: wrk_972e840e9e9a4f0f94d9991ad54026c9
+  created: 1756326006469
+  modified: 1756326006469
+  description: ""
+collection:
+  - url: http://localhost:3000/api/animais
+    name: Cadastrar Animal
+    meta:
+      id: req_b6e93379965143d4ae702318694af1be
+      created: 1756326070732
+      modified: 1756326276616
+      isPrivate: false
+      description: ""
+      sortKey: -1756326070732
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Marie",
+          "especie": "Gata",
+          "idade": 7,
+          "porte": "Grande"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/animais
+    name: Listar Animais
+    meta:
+      id: req_4b0e67483a0f4e6e8a7b8ef28273da09
+      created: 1756326379845
+      modified: 1756326383792
+      isPrivate: false
+      description: ""
+      sortKey: -1756052307623
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Marie",
+          "especie": "Gata",
+          "idade": 7,
+          "porte": "Grande"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/animais/68af6995d6954045efdcd200
+    name: Buscar Animal por ID
+    meta:
+      id: req_7b0b1c3851354ae095d82c48e21b63f3
+      created: 1756326463695
+      modified: 1756326491227
+      isPrivate: false
+      description: ""
+      sortKey: -1755915426068.5
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Marie",
+          "especie": "Gata",
+          "idade": 7,
+          "porte": "Grande"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/animais/68af6995d6954045efdcd200
+    name: Atualizar Parcialmente um Animal
+    meta:
+      id: req_525cf1b65b654a389b6ef0715c2276c6
+      created: 1756326570192
+      modified: 1756327443429
+      isPrivate: false
+      description: ""
+      sortKey: -1755846985291.25
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "status_adocao": "Adotado"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/animais/68af6995d6954045efdcd200
+    name: Deletar um Animal
+    meta:
+      id: req_bbb8686aeffe481bad1e1dbf0f20074a
+      created: 1756327499899
+      modified: 1756327528312
+      isPrivate: false
+      description: ""
+      sortKey: -1755812764902.625
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fb260e9eb2ae59b602976fc82f77144d4c3b77bc
+    created: 1756326006489
+    modified: 1756326006489
+environments:
+  name: Base Environment
+  meta:
+    id: env_fb260e9eb2ae59b602976fc82f77144d4c3b77bc
+    created: 1756326006474
+    modified: 1756326006474
+    isPrivate: false
