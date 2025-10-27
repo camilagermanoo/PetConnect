@@ -25,7 +25,7 @@ const animalPerdidoSchema = new mongoose.Schema({
         required:true,
         enum:["Encontrado", "Perdido"]
     },
-    descrição:{
+    descricao:{
         type:String,
         required:true,
         trim: true,
@@ -34,10 +34,6 @@ const animalPerdidoSchema = new mongoose.Schema({
         type:String,
         required:true,
         trim:true
-    },
-    dataRegistro:{
-        type:Date,
-        default:Date.now
     },
     local:{
         type:String,
