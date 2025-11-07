@@ -1,20 +1,15 @@
 const express = require('express');
-const controllerAnimaisPerdidosEncontrados = require('../src/controllers/animalPerdidoEncontradoController');
+const controllerAnimalPerdidoEncontrado = require('../src/controllers/animalPerdidoEncontradoController');
 
 const router = express.Router();
-                            // -------------------- Rotas -------------------- //
-// ROTA POST //                             
-router.post('/animais-perdidos', controllerAnimaisPerdidosEncontrados.criarAnimal);
 
-// ROTAS GET //
-router.get('/animais-perdidos',controllerAnimaisPerdidosEncontrados.listarAnimal);
-router.get('/animais-perdidos/:id',controllerAnimaisPerdidosEncontrados.listarAnimalPorId);
+//Rotas
 
-// ROTAS PUT/PATCH // 
-router.put('/animais-perdidos/:id', controllerAnimaisPerdidosEncontrados.atualizarAnimal);
-router.patch('/animais-perdidos/:id',controllerAnimaisPerdidosEncontrados.atualizarParcialAnimal);
-
-// ROTA DELETE //
-router.delete('/animais-perdidos/:id',controllerAnimaisPerdidosEncontrados.excluirAnimal);
+router.post('/animais-perdidos', animalPerdidoController.createAnimal);
+router.get('/animais-perdidos', animalPerdidoController.getAllAnimals);
+router.get('/animais-perdidos/:id', animalPerdidoController.getAnimalById);
+router.put('/animais-perdidos/:id', animalPerdidoController.updateAnimal);
+router.patch('/animais-perdidos/:id', animalPerdidoController.updatePartialAnimal);
+router.delete('/animais-perdidos/:id', animalPerdidoController.deleteAnimal);
 
 module.exports = router;

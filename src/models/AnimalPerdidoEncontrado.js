@@ -40,4 +40,8 @@ const animalPerdidoSchema = new mongoose.Schema({
         required:true,
         trim:true
     }
-})
+}, { timestamps: true }); // Adiciona createdAt e updatedAt
+
+const AnimalPerdidoEncontrado = mongoose.model('AnimalPerdidoEncontrado', animalPerdidoSchema);
+
+module.exports = AnimalPerdidoEncontrado;
