@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require('./routes');
 const connectDB = require('../config/db');
 require('dotenv').config(); // Carrega as variáveis de ambiente do .env
+const routesAnimaisPertidosAchados = require('../routes/animaisPerdidosEncontradosroutes')
 
 const app = express();
 
@@ -13,5 +14,5 @@ app.use(express.json());
 
 // Adiciona o prefixo /api para todas as rotas definidas em 'routes'
 app.use('/api', routes);
-
+app.use('/api', routesAnimaisPertidosAchados);
 module.exports = app;
