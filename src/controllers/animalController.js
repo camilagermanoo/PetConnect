@@ -1,4 +1,4 @@
-const Animal = require('../models/Animal');
+const Animal = require('../models/Animal.js');
 
 // Função para CADASTRAR um novo animal (POST)
 exports.createAnimal = async (req, res) => {

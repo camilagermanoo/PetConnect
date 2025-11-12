@@ -1,12 +1,17 @@
 const { Router } = require('express');
 const router = Router();
 
-// 1. Importa o controller de animais que criamos
+// 1. Importa o controller de animais e usuário que criamos
 const animalController = require('./controllers/animalController');
+const authController = require('./controllers/authController');
 
 router.get('/', (req, res) => {
   res.send('API funcionando');
 });
+
+// --- ROTAS DE AUTENTICAÇÃO ---
+router.post('/auth/register', authController.register);
+router.post('/auth/login', authController.login);
 
 // --- ROTAS PARA O CRUD DE ANIMAIS ---
 

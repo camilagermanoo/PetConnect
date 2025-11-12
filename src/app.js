@@ -1,13 +1,15 @@
 const express = require('express');
-const routes = require('./routes');
-const connectDB = require('../config/db');
+const routes = require('./routes.js');
+// const connectDB = require('../config/db');
 require('dotenv').config(); // Carrega as variáveis de ambiente do .env
-const routesAnimaisPertidosAchados = require('../routes/animaisPerdidosEncontradosroutes')
+const routesAnimaisPertidosAchados = require('../routes/animalPerdidoEncontradoroutes')
 
 const app = express();
 
 // Conecta ao banco de dados
-connectDB();
+// const connectDB = require('../config/db');
+// connectDB(); // ❌ Comentado - não conecta automaticamente ao importar
+
 
 // Middleware para o Express entender requisições em formato JSON
 app.use(express.json());

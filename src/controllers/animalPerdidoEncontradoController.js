@@ -1,4 +1,4 @@
-const AnimalPerdidoEncontrado = require("../models/AnimalPerdidoEncontrado");
+const AnimalPerdidoEncontrado = require("../models/AnimalPerdidoEncontrado.js");
 
 // POST
 exports.createAnimal = async (req, res) => {
